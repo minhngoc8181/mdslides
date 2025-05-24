@@ -100,31 +100,3 @@ body {
   padding: 2px 4px;
   border-radius: 3px;
 }
-
-/* CSS cho MathJax - hỗ trợ hiển thị công thức toán */
-.reveal mjx-container {
-  display: flex !important;
-  justify-content: center !important;
-  width: 100% !important;
-  margin: 1em auto !important;
-  text-align: center !important;
-}
-
-.reveal .slides section p {
-  text-align: center; /* Căn giữa các đoạn văn có chứa công thức */
-}
-
-/* Style cho ma trận */
-.reveal mjx-mtable {
-  line-height: 1.5em !important;
-  margin: 0 auto !important;
-}
-
-.reveal mjx-mtr {
-  display: table-row !important;
-}
-
-.reveal mjx-mtd {
-  display: table-cell !important;
-  padding: 0.2em 0.5em !important;
-}

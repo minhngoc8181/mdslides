@@ -1,8 +1,8 @@
 // Lấy tham chiếu đến các plugins của Reveal.js
-const RevealMarkdown = window.RevealMarkdown;
-const RevealHighlight = window.RevealHighlight;
-const RevealNotes = window.RevealNotes;
-const RevealMath = window.RevealMath;
+// const RevealMarkdown = window.RevealMarkdown;
+// const RevealHighlight = window.RevealHighlight;
+// const RevealNotes = window.RevealNotes;
+// const RevealMath = window.RevealMath;
 
 document.addEventListener('DOMContentLoaded', () => {
     const slidesContainer = document.getElementById('slides-container');
@@ -229,37 +229,37 @@ document.addEventListener('DOMContentLoaded', () => {
             history: true,
             center: true,
             slideNumber: 'c/t', // Hiển thị số slide hiện tại / tổng số slide
-            width: 1280,        // Chiều rộng cơ sở của slide
-            height: 720,       // Chiều cao cơ sở của slide
+            width: 1920,        // Chiều rộng cơ sở của slide
+            height: 1080,       // Chiều cao cơ sở của slide
             margin: 0.04,      // Tỷ lệ lề xung quanh nội dung slide
             minScale: 0.2,
-            maxScale: 2.0,
+            maxScale: 1.0,
             transition: 'slide', // 'none', 'fade', 'slide', 'convex', 'concave', 'zoom'
             backgroundTransition: 'fade',
             plugins: [RevealMarkdown, RevealHighlight, RevealNotes, RevealMath.MathJax3],
             math: {
                 mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js',
-                config: 'TeX-AMS_HTML-full',
-                tex: {
-                    packages: ['base', 'ams', 'noerrors', 'noundefined', 'newcommand', 'boldsymbol', 'amsmath', 'amssymb'],
-                    macros: {},
-                    inlineMath: [['$', '$'], ['\\(', '\\)']],
-                    displayMath: [['$$', '$$'], ['\\[', '\\]']],
-                    processEscapes: true,
-                    processEnvironments: true,
-                    tagSide: 'right',
-                    tagIndent: '0.8em'
-                },
-                chtml: {
-                    scale: 1,
-                    displayAlign: 'center',
-                    displayIndent: '0'
-                },
-                svg: {
-                    scale: 1,
-                    displayAlign: 'center',
-                    displayIndent: '0'
-                }
+                // config: 'TeX-AMS_HTML-full',
+                // tex: {
+                //     packages: ['base', 'ams', 'noerrors', 'noundefined', 'newcommand', 'boldsymbol', 'amsmath', 'amssymb'],
+                //     macros: {},
+                //     inlineMath: [['$', '$'], ['\\(', '\\)']],
+                //     displayMath: [['$$', '$$'], ['\\[', '\\]']],
+                //     processEscapes: true,
+                //     processEnvironments: true,
+                //     tagSide: 'right',
+                //     tagIndent: '0.8em'
+                // },
+                // chtml: {
+                //     scale: 1,
+                //     displayAlign: 'center',
+                //     displayIndent: '0'
+                // },
+                // svg: {
+                //     scale: 1,
+                //     displayAlign: 'center',
+                //     displayIndent: '0'
+                // }
             },
 
             // Cấu hình cho RevealHighlight (nếu cần)
@@ -271,39 +271,40 @@ document.addEventListener('DOMContentLoaded', () => {
             Reveal.sync();
             Reveal.layout(); // Đảm bảo layout được cập nhật
 
-            // Đảm bảo MathJax render lại các công thức toán học
-            if (typeof MathJax !== 'undefined') {
-                // Hàm điều chỉnh style cho MathJax sau khi render
-                const fixMathJaxAlignment = function () {
-                    // Tìm tất cả các container MathJax
-                    document.querySelectorAll('mjx-container').forEach(container => {
-                        // Đảm bảo container được căn giữa
-                        container.style.display = 'flex';
-                        container.style.justifyContent = 'center';
-                        container.style.width = '100%';
-                        container.style.margin = '1em auto';
+            // // Đảm bảo MathJax render lại các công thức toán học
+            // if (typeof MathJax !== 'undefined') {
+            //     // Hàm điều chỉnh style cho MathJax sau khi render
+            //     // const fixMathJaxAlignment = function () {
+            //     //     return;
+            //     //     // Tìm tất cả các container MathJax
+            //     //     document.querySelectorAll('mjx-container').forEach(container => {
+            //     //         // Đảm bảo container được căn giữa
+            //     //         container.style.display = 'flex';
+            //     //         container.style.justifyContent = 'center';
+            //     //         container.style.width = '100%';
+            //     //         container.style.margin = '1em auto';
 
-                        // Kiểm tra nếu là display math (không phải inline)
-                        if (container.hasAttribute('display')) {
-                            // Tìm phần tử cha (thường là p) và đặt text-align: center
-                            let parent = container.parentElement;
-                            if (parent && parent.tagName.toLowerCase() === 'p') {
-                                parent.style.textAlign = 'center';
-                            }
-                        }
-                    });
-                };
+            //     //         // Kiểm tra nếu là display math (không phải inline)
+            //     //         if (container.hasAttribute('display')) {
+            //     //             // Tìm phần tử cha (thường là p) và đặt text-align: center
+            //     //             let parent = container.parentElement;
+            //     //             if (parent && parent.tagName.toLowerCase() === 'p') {
+            //     //                 parent.style.textAlign = 'center';
+            //     //             }
+            //     //         }
+            //     //     });
+            //     // };
 
-                // Thêm hook để render MathJax tối ưu hơn
-                Reveal.addEventListener('slidechanged', function () {
-                    if (MathJax.typesetPromise) {
-                        MathJax.typesetPromise().then(fixMathJaxAlignment);
-                    }
-                });
+            //     // // Thêm hook để render MathJax tối ưu hơn
+            //     // Reveal.addEventListener('slidechanged', function () {
+            //     //     if (MathJax.typesetPromise) {
+            //     //         MathJax.typesetPromise().then(fixMathJaxAlignment);
+            //     //     }
+            //     // });
 
-                // Render ngay lần đầu tiên
-                MathJax.typesetPromise && MathJax.typesetPromise().then(fixMathJaxAlignment);
-            }
+            //     // // Render ngay lần đầu tiên
+            //     // MathJax.typesetPromise && MathJax.typesetPromise().then(fixMathJaxAlignment);
+            // }
         });
     }
 

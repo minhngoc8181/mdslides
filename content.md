@@ -74,7 +74,7 @@ console.log('Hello, Markdown Slides!');
 Công thức toán học được viết theo cú pháp LaTeX:
 
 - Công thức inline: $E = mc^2$
-- Công thức phân số: $\frac{a}{b} = \frac{c}{d}$
+- Công thức phân số: $\cfrac{a}{b} = \cfrac{c}{d}$
 - Căn thức: $\sqrt{x^2 + y^2} = r$
 
 ## Công thức phức tạp {.slidebreak}
@@ -85,17 +85,17 @@ $$ax^2 + bx + c = 0$$
 
 Nghiệm của phương trình:
 
-$$x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}$$
+$$x = \cfrac{-b \pm \sqrt{b^2 - 4ac}}{2a}$$
 
 ## Giới hạn, đạo hàm và tích phân {.slidebreak}
 
 Giới hạn:
 
-$$\lim_{x \to \infty} \frac{1}{x} = 0$$
+$$\lim_{x \to \infty} \cfrac{1}{x} = 0$$
 
 Đạo hàm:
 
-$$f'(x) = \lim_{h \to 0} \frac{f(x+h) - f(x)}{h}$$
+$$f'(x) = \lim_{h \to 0} \cfrac{f(x+h) - f(x)}{h}$$
 
 Tích phân:
 
