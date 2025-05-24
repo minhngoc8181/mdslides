@@ -1,0 +1,130 @@
+/* CSS tùy chỉnh cho framework */
+body {
+  /* Có thể thêm font chữ mặc định ở đây nếu muốn */
+}
+
+.reveal.slides section {
+  /* Căn chỉnh nội dung slide mặc định (ví dụ: căn trái) */
+  text-align: left;
+  padding: 20px; /* Thêm padding mặc định cho các slide */
+}
+
+.reveal.slides section h1,
+.reveal.slides section h2,
+.reveal.slides section h3,
+.reveal.slides section h4,
+.reveal.slides section h5,
+.reveal.slides section h6 {
+  text-align: left; /* Tiêu đề cũng căn trái theo mặc định */
+  margin-bottom: 0.5em;
+}
+
+/* Slide tiêu đề đặc biệt */
+.reveal.slides section.title-slide {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%; /* Để căn giữa theo chiều dọc */
+}
+
+.reveal.slides section.title-slide h1 {
+  font-size: 2.5em; /* Kích thước lớn hơn cho tiêu đề chính */
+  margin-bottom: 0.5em;
+  text-align: center;
+}
+.reveal.slides section.title-slide p {
+  font-size: 1.2em;
+  text-align: center;
+}
+
+/* Slide mục lục */
+.reveal.slides section[data-state="toc-slide"] {
+  text-align: left;
+}
+
+.reveal.slides section[data-state="toc-slide"] h2 {
+  margin-bottom: 20px;
+  text-align: center; /* Tiêu đề mục lục có thể căn giữa */
+}
+
+.reveal.slides section[data-state="toc-slide"] ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.reveal.slides section[data-state="toc-slide"] ul li {
+  margin-bottom: 10px;
+}
+
+.reveal.slides section[data-state="toc-slide"] ul li a {
+  text-decoration: none;
+  font-size: 1.1em;
+}
+.reveal.slides section[data-state="toc-slide"] ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Tùy chỉnh cho các lớp Bootstrap nếu cần ghi đè */
+.container,
+.container-fluid {
+  /* Ví dụ: đảm bảo container không chiếm toàn bộ chiều rộng slide trừ khi muốn */
+  /* max-width: 90%; */
+}
+
+/* Responsive cho hình ảnh bên trong slide */
+.reveal.slides img {
+  max-width: 100%;
+  height: auto;
+  display: block; /* Giúp căn giữa dễ hơn nếu cần */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Cải thiện khả năng đọc cho khối mã */
+.reveal pre {
+  width: 100%; /* Đảm bảo khối mã không tràn slide */
+  font-size: 0.85em; /* Điều chỉnh kích thước font cho mã */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+
+.reveal code {
+  font-family: "Courier New", Courier, monospace; /* Font nhất quán cho mã */
+}
+
+/* Các lớp tiện ích tùy chỉnh (nếu cần) */
+.custom-highlight {
+  background-color: yellow;
+  padding: 2px 4px;
+  border-radius: 3px;
+}
+
+/* CSS cho MathJax - hỗ trợ hiển thị công thức toán */
+.reveal mjx-container {
+  display: flex !important;
+  justify-content: center !important;
+  width: 100% !important;
+  margin: 1em auto !important;
+  text-align: center !important;
+}
+
+.reveal .slides section p {
+  text-align: center; /* Căn giữa các đoạn văn có chứa công thức */
+}
+
+/* Style cho ma trận */
+.reveal mjx-mtable {
+  line-height: 1.5em !important;
+  margin: 0 auto !important;
+}
+
+.reveal mjx-mtr {
+  display: table-row !important;
+}
+
+.reveal mjx-mtd {
+  display: table-cell !important;
+  padding: 0.2em 0.5em !important;
+}
