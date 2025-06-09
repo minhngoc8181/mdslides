@@ -35,7 +35,7 @@ Markdown là ngôn ngữ đánh dấu nhẹ, dễ đọc, dễ viết.
 
 ## Chèn hình ảnh
 
-![Logo EIU](https://eiu.edu.vn/wp-content/uploads/2024/12/cropped-cropped-cropped-cropped-LOGO-EIU-15_Short-logo-full-color.png){style="max-width: 200px;"}
+![Logo EIU](https://eiu.edu.vn/wp-content/uploads/2024/12/cropped-cropped-cropped-cropped-LOGO-EIU-15_Short-logo-full-color.png){style="top:60%; left:60%; width:20%;position:absolute;"}
 
 
 ## Bảng dữ liệu {.slidebreak}
@@ -47,6 +47,17 @@ Markdown là ngôn ngữ đánh dấu nhẹ, dễ đọc, dễ viết.
 | 3   | Lê Cường   | 7.8  |
 
 {.table .table-dark .table-striped}
+
+
+**Wellformed the table's rowspan and/or colspan attributes, usage sample below:**
+
+| A                       | B   | C   | D                |
+| ----------------------- | --- | --- | ---------------- |
+| 1                       | 11  | 111 | 1111 {rowspan=3} |
+| 2 {colspan=2 rowspan=2} | 22  | 222 | 2222             |
+| 3                       | 33  | 333 | 3333             |
+
+{border=1}
 
 ## Liên kết và code {.slidebreak}
 

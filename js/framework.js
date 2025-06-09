@@ -227,7 +227,7 @@ document.addEventListener('DOMContentLoaded', () => {
             controls: true,
             progress: true,
             history: true,
-            center: true,
+            center: false,
             slideNumber: 'c/t', // Hiển thị số slide hiện tại / tổng số slide
             width: 1920,        // Chiều rộng cơ sở của slide
             height: 1080,       // Chiều cao cơ sở của slide
